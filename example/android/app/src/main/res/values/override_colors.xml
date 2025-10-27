@@ -1,0 +1,6 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <item name="m3_sys_color_dynamic_dark_primary" type="color" tools:ignore="MissingResource">#3700B3</item>
+    <item name="m3_sys_color_dynamic_dark_primary_container" type="color" tools:ignore="MissingResource">#6200EE</item>
+    <item name="system_primary_dark" type="color" tools:ignore="MissingResource">#3700B3</item>
+    <item name="system_primary_container_dark" type="color" tools:ignore="MissingResource">#6200EE</item>
+</resources>
