@@ -19,4 +19,5 @@
     <color name="system_outline_dark" tools:ignore="MissingResource">#888888</color>
     <color name="system_outline_variant_dark" tools:ignore="MissingResource">#AAAAAA</color>
     <color name="system_primary_dark" tools:ignore="MissingResource">#3700B3</color>
+    <color name="m3_sys_color_dynamic_dark_outline_variant" tools:ignore="MissingResource">#AAAAAA</color>
 </resources>
