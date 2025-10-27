@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="system_background_dark" tools:ignore="MissingResource">#000000</color>
+    <color name="system_error_dark" tools:ignore="MissingResource">#B00020</color>
+    <color name="system_error_container_dark" tools:ignore="MissingResource">#CF6679</color>
+    <color name="system_on_surface_light" tools:ignore="MissingResource">#FFFFFF</color>
+    <color name="system_primary_light" tools:ignore="MissingResource">#6200EE</color>
+    <color name="system_surface_light" tools:ignore="MissingResource">#FFFFFF</color>
+    <color name="system_on_background_dark" tools:ignore="MissingResource">#FFFFFF</color>
+    <color name="system_on_error_dark" tools:ignore="MissingResource">#000000</color>
+    <color name="system_on_error_container_dark" tools:ignore="MissingResource">#000000</color>
+    <color name="system_on_primary_dark" tools:ignore="MissingResource">#000000</color>
+    <color name="system_on_primary_container_dark" tools:ignore="MissingResource">#000000</color>
+    <color name="system_on_secondary_dark" tools:ignore="MissingResource">#000000</color>
+    <color name="system_on_secondary_container_dark" tools:ignore="MissingResource">#000000</color>
+    <color name="system_on_surface_dark" tools:ignore="MissingResource">#FFFFFF</color>
+    <color name="system_on_surface_variant_dark" tools:ignore="MissingResource">#CCCCCC</color>
+    <color name="system_on_tertiary_dark" tools:ignore="MissingResource">#000000</color>
+    <color name="system_on_tertiary_container_dark" tools:ignore="MissingResource">#000000</color>
+    <color name="system_outline_dark" tools:ignore="MissingResource">#888888</color>
+    <color name="system_outline_variant_dark" tools:ignore="MissingResource">#AAAAAA</color>
+    <color name="system_primary_dark" tools:ignore="MissingResource">#3700B3</color>
+</resources>
