@@ -84,4 +84,7 @@
     <color name="system_tertiary_fixed_dim" tools:ignore="MissingResource">#FF9800</color>
     <color name="system_neutral1_600" tools:ignore="MissingResource">#999999</color>
     <color name="system_neutral2_600" tools:ignore="MissingResource">#888888</color>
+
+    <color name="m3_sys_color_dynamic_dark_primary" tools:ignore="MissingResource">#3700B3</color>
+    <color name="m3_sys_color_dynamic_light_inverse_primary" tools:ignore="MissingResource">#3700B3</color>
 </resources>
