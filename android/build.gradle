@@ -32,6 +32,26 @@ android {
     defaultConfig {
         minSdkVersion 19
         consumerProguardFiles 'proguard-rules.pro'
+        resValue "color", "system_primary_dark", "#3700B3"
+        resValue "color", "system_primary_container_dark", "#6200EE"
+        resValue "color", "system_outline_dark", "#888888"
+        resValue "color", "system_background_dark", "#000000"
+        resValue "color", "system_error_dark", "#B00020"
+        resValue "color", "system_error_container_dark", "#CF6679"
+        resValue "color", "system_on_surface_light", "#FFFFFF"
+        resValue "color", "system_primary_light", "#6200EE"
+        resValue "color", "system_surface_light", "#FFFFFF"
+        resValue "color", "system_on_background_dark", "#FFFFFF"
+        resValue "color", "system_on_error_dark", "#000000"
+        resValue "color", "system_on_error_container_dark", "#000000"
+        resValue "color", "system_on_primary_dark", "#000000"
+        resValue "color", "system_on_primary_container_dark", "#000000"
+        resValue "color", "system_on_secondary_dark", "#000000"
+        resValue "color", "system_on_secondary_container_dark", "#000000"
+        resValue "color", "system_on_surface_dark", "#FFFFFF"
+        resValue "color", "system_on_surface_variant_dark", "#CCCCCC"
+        resValue "color", "system_on_tertiary_dark", "#000000"
+        resValue "color", "system_on_tertiary_container_dark", "#000000"
     }
     lintOptions {
         disable 'InvalidPackage'
