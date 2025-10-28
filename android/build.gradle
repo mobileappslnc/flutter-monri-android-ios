@@ -26,7 +26,7 @@ apply plugin: 'com.android.library'
 
 android {
     namespace "com.monri.flutter"
-    compileSdkVersion 31
+    compileSdkVersion 36
 
     buildFeatures {
         buildConfig true
