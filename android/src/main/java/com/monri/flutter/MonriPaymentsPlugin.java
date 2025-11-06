@@ -41,8 +41,8 @@ public class MonriPaymentsPlugin implements FlutterPlugin, MethodCallHandler, Ac
     private Monri monri;
 
     private void initMonri() {
-        if (activityBinding != null && monri == null) {
-            monri = new Monri(activityBinding);
+        if (activity != null && monri == null && activity instanceof ActivityResultCaller) {
+            monri = new Monri((ActivityResultCaller) activity);
         }
     }
 
