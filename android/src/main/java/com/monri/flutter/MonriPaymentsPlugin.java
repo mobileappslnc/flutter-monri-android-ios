@@ -40,7 +40,7 @@ public class MonriPaymentsPlugin implements FlutterPlugin, MethodCallHandler, Ac
     private Activity activity;
     private Monri monri;
     private void initMonri() {
-        if (activity != null && monri == null) {
+        if (activity != null && monri == null && activity instanceof ActivityResultCaller) {
             monri = new Monri((ActivityResultCaller) activity);
         }
     }
@@ -49,7 +49,7 @@ public class MonriPaymentsPlugin implements FlutterPlugin, MethodCallHandler, Ac
         if (CONFIRM_PAYMENT.equals(call.method)) {
             initMonri();
             if(monri == null){
-                result.error("monri_not_initialized", "Monri SDK was not initialized — check activity context", null);
+                result.error("monri_not_initialized", "Monri SDK was not initialized — check activity context activity.getClass().getName()"+activity.getClass().getName(), null);
                 return;
             }
             monriConfirmPayment(call.arguments, result);
