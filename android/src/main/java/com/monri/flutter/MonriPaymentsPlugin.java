@@ -39,16 +39,19 @@ public class MonriPaymentsPlugin implements FlutterPlugin, MethodCallHandler, Ac
     private Application application;
     private Activity activity;
     private Monri monri;
-
     private void initMonri() {
-        if (activity != null && monri == null && activity instanceof ActivityResultCaller) {
+        if (activity != null && monri == null) {
             monri = new Monri((ActivityResultCaller) activity);
         }
     }
-
     @Override
     public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
         if (CONFIRM_PAYMENT.equals(call.method)) {
+            initMonri();
+            if(monri == null){
+                result.error("monri_not_initialized", "Monri SDK was not initialized — check activity context", null);
+                return;
+            }
             monriConfirmPayment(call.arguments, result);
         } else {
             result.notImplemented();
@@ -62,11 +65,6 @@ public class MonriPaymentsPlugin implements FlutterPlugin, MethodCallHandler, Ac
 
         MonriPaymentsPlugin.writeMetaData(this.activity, String.format("Android-SDK:Flutter:%s", BuildConfig.MONRI_FLUTTER_PLUGIN_VERSION));
 
-        initMonri();
-        if(monri == null){
-            result.error("monri_not_initialized", "Monri SDK was not initialized — check activity context", null);
-            return;
-        }
         monri.setMonriApiOptions(flutterConfirmPaymentParams.monriApiOptions());
 
         this.monri.confirmPayment(confirmPaymentParams, new ActionResultConsumer<PaymentResult>() {
@@ -125,8 +123,6 @@ public class MonriPaymentsPlugin implements FlutterPlugin, MethodCallHandler, Ac
 
         channel = new MethodChannel(messenger, CHANNEL);
         channel.setMethodCallHandler(this);
-
-        initMonri();        
     }
 
     @Override
