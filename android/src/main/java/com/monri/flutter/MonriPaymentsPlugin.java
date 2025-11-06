@@ -62,6 +62,8 @@ public class MonriPaymentsPlugin implements FlutterPlugin, MethodCallHandler, Ac
 
         MonriPaymentsPlugin.writeMetaData(this.activity, String.format("Android-SDK:Flutter:%s", BuildConfig.MONRI_FLUTTER_PLUGIN_VERSION));
 
+        initMonri();
+        
         monri.setMonriApiOptions(flutterConfirmPaymentParams.monriApiOptions());
 
         this.monri.confirmPayment(confirmPaymentParams, new ActionResultConsumer<PaymentResult>() {
