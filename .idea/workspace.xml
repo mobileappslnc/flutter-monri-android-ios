@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcc30567-14c6-4d24-9d7a-d59034394b24" name="Default Changelist" comment="Minor changes&#10;&#10;Worked on metadata&#10;&#10;WP-925">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/monri/flutter/MonriPaymentsPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/monri/flutter/MonriPaymentsPlugin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

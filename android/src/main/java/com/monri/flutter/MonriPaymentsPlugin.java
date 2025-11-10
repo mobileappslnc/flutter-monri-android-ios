@@ -50,7 +50,6 @@ public class MonriPaymentsPlugin implements FlutterPlugin, MethodCallHandler, Ac
     @Override
     public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
         if (CONFIRM_PAYMENT.equals(call.method)) {
-            initMonri();
             if (monri == null) {
                 result.error("monri_not_initialized", "Monri SDK was not initialized — check activity context activity.getClass().getName()" + activity.getClass().getName(), null);
                 return;
@@ -126,6 +125,8 @@ public class MonriPaymentsPlugin implements FlutterPlugin, MethodCallHandler, Ac
 
         channel = new MethodChannel(messenger, CHANNEL);
         channel.setMethodCallHandler(this);
+
+        initMonri();
     }
 
     @Override
