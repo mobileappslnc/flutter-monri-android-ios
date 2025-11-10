@@ -13,6 +13,7 @@ import com.monri.android.model.PaymentResult;
 import androidx.activity.result.ActivityResultCaller;
 import androidx.annotation.NonNull;
 import androidx.preference.PreferenceManager;
+
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
@@ -39,17 +40,19 @@ public class MonriPaymentsPlugin implements FlutterPlugin, MethodCallHandler, Ac
     private Application application;
     private Activity activity;
     private Monri monri;
+
     private void initMonri() {
         if (activity != null && monri == null) {
-            monri = new Monri(activity);
+            monri = new Monri((ActivityResultCaller) activity);
         }
     }
+
     @Override
     public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
         if (CONFIRM_PAYMENT.equals(call.method)) {
             initMonri();
-            if(monri == null){
-                result.error("monri_not_initialized", "Monri SDK was not initialized — check activity context activity.getClass().getName()"+activity.getClass().getName(), null);
+            if (monri == null) {
+                result.error("monri_not_initialized", "Monri SDK was not initialized — check activity context activity.getClass().getName()" + activity.getClass().getName(), null);
                 return;
             }
             monriConfirmPayment(call.arguments, result);
@@ -59,7 +62,7 @@ public class MonriPaymentsPlugin implements FlutterPlugin, MethodCallHandler, Ac
     }
 
     private void monriConfirmPayment(Object arguments, MethodChannel.Result result) {
-        
+
         FlutterConfirmPaymentParams flutterConfirmPaymentParams = new MonriConverter(arguments).process();
         ConfirmPaymentParams confirmPaymentParams = flutterConfirmPaymentParams.confirmPaymentParams();
 
